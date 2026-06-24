@@ -68,11 +68,11 @@ def menu():
         elif opcion == "5":
             if not inv.inventario:
                 print("El catálogo está vacío.")
-            for p in inv.inventario:
-                p.mostrar_datos()
+            for p in inv.inventario.values():
+    p.mostrar_datos()
                 
         elif opcion == "6":
-            agotados = [p for p in inv.inventario if p.stock == 0]
+            agotados = [p for p in inv.inventario.values() if p.stock == 0]
             if not agotados:
                 print("No hay productos agotados con stock en 0.")
             for p in agotados:
