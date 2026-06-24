@@ -66,11 +66,11 @@ def menu():
                 print("Entrada inválida.")
                 
         elif opcion == "5":
-    if not inv.inventario:
-        print("El catálogo está vacío.")
-    else:
-        for p in inv.inventario.values():
-            p.mostrar_datos()
+            if not inv.inventario:
+                print("El catálogo está vacío.") 
+            else:
+                for p in inv.inventario.values():
+                    p.mostrar_datos()
                 
         elif opcion == "6":
             agotados = [p for p in inv.inventario.values() if p.stock == 0]
@@ -113,4 +113,4 @@ def menu():
 
 if __name__ == "__main__":
     menu()
-    
+ 
