@@ -1,6 +1,6 @@
 from producto import Producto
 
-inventario = []
+inventario = {}
 
 def registrar_producto(id_prod, nombre, categoria, precio, stock):
     # Validar que el ID no exista previamente
